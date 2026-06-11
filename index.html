@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infografik Qurban Al-Ikhlas 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#0D5C5C;--teal-mid:#1A7A6E;--teal-lt:#EBF5F3;
+  --gold:#C8973A;--gold-lt:#E8BC6A;--gold-bg:#FEF3E2;
+  --cream:#F9F4EC;--ivory:#FFFDF8;
+  --charcoal:#1C1C1C;--muted:#6B7280;--border:#E5EAE8;
+  --white:#fff;
+}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal);min-height:100vh}
+
+/* HEADER */
+.hdr{background:linear-gradient(145deg,#0A4040 0%,var(--teal) 50%,#0D6B5C 100%);padding:60px 40px 52px;text-align:center;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 20% 30%,rgba(200,151,58,.15) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 80% 70%,rgba(200,151,58,.1) 0%,transparent 65%)}
+.hdr-badge{display:inline-block;border:1.5px solid rgba(232,188,106,.6);color:var(--gold-lt);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 20px;border-radius:24px;margin-bottom:22px;position:relative}
+.hdr h1{font-family:'Playfair Display',serif;font-size:clamp(34px,6vw,62px);font-weight:900;color:#fff;line-height:1.08;position:relative}
+.hdr h1 em{color:var(--gold-lt);font-style:normal}
+.hdr-sub{color:rgba(255,255,255,.55);font-size:13px;letter-spacing:1.5px;margin-top:10px;position:relative}
+.gold-bar{width:56px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:2px;margin:18px auto 0}
+
+/* NAV */
+.nav{background:var(--teal);display:flex;overflow-x:auto;gap:0;scrollbar-width:none;position:sticky;top:0;z-index:100}
+.nav::-webkit-scrollbar{display:none}
+.nav-btn{flex-shrink:0;padding:14px 22px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
+.nav-btn:hover{color:rgba(255,255,255,.85)}
+.nav-btn.active{color:#fff;border-bottom-color:var(--gold-lt)}
+
+/* SECTIONS */
+.sections{max-width:960px;margin:0 auto;padding:0 20px 60px}
+.section{display:none;padding-top:44px}
+.section.active{display:block}
+
+/* SECTION HEADER */
+.sec-eyebrow{font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--teal-mid);margin-bottom:6px}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(20px,3.5vw,28px);font-weight:700;color:var(--teal);margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+
+/* STAT CARDS */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:36px}
+.stat-card{background:var(--white);border-radius:16px;padding:24px 18px;text-align:center;border:1px solid var(--border);position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.sc-t::before{background:linear-gradient(90deg,var(--teal),var(--teal-mid))}
+.sc-g::before{background:linear-gradient(90deg,var(--gold),var(--gold-lt))}
+.sc-gr::before{background:linear-gradient(90deg,#2D8C6E,#4ABCA0)}
+.sc-p::before{background:linear-gradient(90deg,#6B46C1,#9F7AEA)}
+.stat-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;line-height:1;margin-bottom:5px}
+.sc-t .stat-num{color:var(--teal)}.sc-g .stat-num{color:var(--gold)}.sc-gr .stat-num{color:#2D8C6E}.sc-p .stat-num{color:#6B46C1}
+.stat-unit{font-size:13px;font-weight:700;color:var(--muted)}
+.stat-desc{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* HEWAN */
+.hewan-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:36px}
+@media(max-width:480px){.hewan-grid{grid-template-columns:1fr}}
+.hewan-card{background:var(--teal);border-radius:20px;padding:30px 24px;color:#fff;position:relative;overflow:hidden}
+.hewan-card.k{background:linear-gradient(135deg,#2D8C6E,#1A6050)}
+.hewan-card::after{content:attr(data-e);position:absolute;right:16px;bottom:10px;font-size:60px;opacity:.15}
+.hewan-card h3{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;opacity:.65;margin-bottom:10px}
+.hewan-kg{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;line-height:1}
+.hewan-sub{font-size:12px;opacity:.7;margin-top:6px}
+.hewan-pill{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:5px 13px;font-size:11px;font-weight:700;margin-top:14px}
+
+/* DIST BARS */
+.dist-list{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.dist-row{display:flex;align-items:center;gap:10px}
+.dist-lbl{font-size:11px;font-weight:600;width:190px;flex-shrink:0;color:var(--charcoal)}
+.dist-wrap{flex:1;background:#E0EDEA;border-radius:6px;height:22px;overflow:hidden}
+.dist-bar{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),var(--teal-mid));display:flex;align-items:center;justify-content:flex-end;padding-right:7px;font-size:10px;font-weight:800;color:#fff;transition:width 1s ease}
+.dist-row:nth-child(even) .dist-bar{background:linear-gradient(90deg,var(--teal-mid),#2D9E8A)}
+
+/* PAKET */
+.paket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:36px}
+.paket-card{background:var(--white);border-radius:14px;padding:20px 16px;border:1px solid var(--border)}
+.p-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px}
+.p-lbl{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:4px}
+.p-val{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--teal)}
+.p-sub{font-size:11px;color:var(--muted);margin-top:3px}
+
+/* TAMBAHAN */
+.tamb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:24px}
+.tamb-card{background:var(--teal-lt);border-radius:12px;padding:16px;text-align:center}
+.tamb-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:var(--teal-mid)}
+.tamb-lbl{font-size:11px;font-weight:700;color:var(--teal);margin-top:4px}
+
+/* TOTAL BOX */
+.total-box{background:linear-gradient(135deg,var(--teal) 0%,#073030 100%);border-radius:20px;padding:36px 32px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;margin:28px 0;position:relative;overflow:hidden}
+.total-box::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(rgba(200,151,58,.18),transparent 70%);right:-70px;top:-70px}
+.t-item{position:relative}
+.t-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:5px}
+.t-val{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:#fff;line-height:1}
+.t-val span{font-size:18px;color:var(--gold-lt)}
+.t-note{font-size:11px;color:rgba(255,255,255,.45);margin-top:5px}
+
+/* PANITIA */
+.pan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:28px}
+.pan-card{background:var(--white);border-radius:14px;padding:18px 16px;border-left:4px solid var(--gold);border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.pan-role{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.pan-name{font-size:15px;font-weight:700;color:var(--teal)}
+
+/* SEKSI TAGS */
+.seksi-wrap{background:var(--white);border-radius:14px;padding:18px 20px;border:1px solid var(--border);margin-bottom:28px}
+.seksi-ttl{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;background:var(--teal-lt);color:var(--teal);font-size:11px;font-weight:700;padding:5px 13px;border-radius:20px}
+
+/* ===== DAFTAR PENGQURBAN ===== */
+.qurban-controls{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;align-items:center}
+.qurban-search{flex:1;min-width:200px;padding:10px 16px;border-radius:10px;border:1.5px solid var(--border);font-size:13px;background:var(--white);color:var(--charcoal);outline:none}
+.qurban-search:focus{border-color:var(--teal-mid)}
+.filter-btns{display:flex;gap:8px;flex-wrap:wrap}
+.flt-btn{padding:8px 16px;border-radius:20px;border:1.5px solid var(--border);font-size:11px;font-weight:700;background:var(--white);color:var(--muted);cursor:pointer;transition:all .2s;letter-spacing:.5px}
+.flt-btn:hover{border-color:var(--teal-mid);color:var(--teal)}
+.flt-btn.active{background:var(--teal);border-color:var(--teal);color:#fff}
+
+.sapi-section{margin-bottom:28px}
+.sapi-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sapi-badge{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:20px}
+.sapi-badge.k{background:linear-gradient(135deg,#2D8C6E,var(--teal-mid))}
+.sapi-count{font-size:12px;color:var(--muted);font-weight:600}
+
+.qurban-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.qurban-card{background:var(--white);border-radius:12px;padding:14px 16px;border:1px solid var(--border);display:flex;align-items:flex-start;gap:12px;transition:transform .15s,border-color .15s}
+.qurban-card:hover{transform:translateY(-2px);border-color:var(--teal-mid)}
+.q-avatar{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;letter-spacing:-.5px}
+.av-sapi1{background:#EBF5F3;color:var(--teal)}
+.av-sapi2{background:#E3F0EE;color:#0D5455}
+.av-sapi3{background:#D9EBE8;color:#0A4A4A}
+.av-kambing{background:var(--gold-bg);color:#7A5010}
+.q-body{}
+.q-name{font-size:13px;font-weight:700;color:var(--charcoal);margin-bottom:3px}
+.q-niat{font-size:11px;color:var(--muted);line-height:1.4}
+.q-addr{font-size:10px;color:var(--teal-mid);font-weight:600;margin-top:4px;display:inline-block;background:var(--teal-lt);padding:2px 8px;border-radius:6px}
+
+.q-empty{text-align:center;padding:32px;color:var(--muted);font-size:14px}
+.q-count-info{font-size:12px;color:var(--muted);margin-bottom:16px;font-weight:500}
+
+/* ===== LAPORAN KEUANGAN ===== */
+.keu-hero{background:linear-gradient(135deg,var(--teal) 0%,#073030 100%);border-radius:20px;padding:36px 32px;color:#fff;margin-bottom:32px;position:relative;overflow:hidden}
+.keu-hero::before{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(rgba(200,151,58,.18),transparent 70%);right:-60px;top:-60px}
+.keu-hero h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;margin-bottom:6px}
+.keu-hero p{font-size:13px;opacity:.65}
+.keu-sig{margin-top:20px;display:flex;align-items:center;gap:12px}
+.keu-avatar{width:44px;height:44px;border-radius:50%;background:rgba(200,151,58,.3);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--gold-lt);flex-shrink:0}
+.keu-sig-txt{font-size:13px;opacity:.75}
+.keu-sig-name{font-size:15px;font-weight:700;color:var(--gold-lt)}
+
+.keu-notice{background:var(--gold-bg);border-radius:14px;padding:22px 24px;border:1px solid rgba(200,151,58,.3);margin-bottom:28px;display:flex;gap:14px;align-items:flex-start}
+.keu-notice-icon{font-size:24px;flex-shrink:0}
+.keu-notice h4{font-size:14px;font-weight:700;color:#7A5010;margin-bottom:5px}
+.keu-notice p{font-size:12px;color:#8A6020;line-height:1.6}
+
+.keu-skeleton{background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border);margin-bottom:20px}
+.keu-skeleton h4{font-size:13px;font-weight:700;color:var(--teal);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.sk-row{height:14px;background:#F0F0EC;border-radius:4px;margin-bottom:10px}
+.sk-row.short{width:60%}
+.sk-row.med{width:80%}
+.sk-row.full{width:100%}
+
+.keu-table{width:100%;border-collapse:collapse;margin-bottom:28px}
+.keu-table th{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:10px 14px;text-align:left;border-bottom:2px solid var(--border)}
+.keu-table td{padding:11px 14px;font-size:13px;border-bottom:1px solid var(--border);color:var(--charcoal)}
+.keu-table tr:last-child td{border-bottom:none}
+.keu-table tr:hover td{background:#FAFAF7}
+.keu-table .total-row td{font-weight:700;color:var(--teal);background:var(--teal-lt);border-radius:0}
+
+.keu-sign{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-top:32px;padding-top:24px;border-top:1px dashed var(--border)}
+.keu-sign-box{text-align:center;min-width:150px}
+.keu-sign-box p{font-size:11px;color:var(--muted);margin-bottom:40px}
+.keu-sign-line{width:140px;height:1px;background:var(--charcoal);margin:0 auto 6px}
+.keu-sign-box .name{font-size:14px;font-weight:700;color:var(--teal)}
+.keu-sign-box .role{font-size:11px;color:var(--muted)}
+
+/* FOOTER */
+.ftr{background:var(--teal);text-align:center;padding:30px 20px;color:rgba(255,255,255,.55);font-size:13px}
+.ftr strong{color:var(--gold-lt)}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-badge">Laporan Idul Adha 1447 H / 2026 M</div>
+  <h1>Qurban <em>Al-Ikhlas</em></h1>
+  <p class="hdr-sub">Masjid Al-Ikhlas &middot; Semarang &middot; Rorojonggrang &ndash; Mendut</p>
+  <div class="gold-bar"></div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <button class="nav-btn active" onclick="showTab('ringkasan')">Ringkasan</button>
+  <button class="nav-btn" onclick="showTab('hewan')">Hewan & Daging</button>
+  <button class="nav-btn" onclick="showTab('distribusi')">Distribusi</button>
+  <button class="nav-btn" onclick="showTab('pengqurban')">Daftar Pengqurban</button>
+  <button class="nav-btn" onclick="showTab('panitia')">Panitia</button>
+  <button class="nav-btn" onclick="showTab('keuangan')">Laporan Keuangan</button>
+</nav>
+
+<div class="sections">
+
+  <!-- ===== RINGKASAN ===== -->
+  <div class="section active" id="tab-ringkasan">
+    <p class="sec-eyebrow">Ikhtisar</p>
+    <h2 class="sec-title">Ringkasan Pelaksanaan Qurban 2026</h2>
+
+    <div class="stat-grid">
+      <div class="stat-card sc-t">
+        <div class="stat-num">34</div>
+        <div class="stat-unit">Mudhoki</div>
+        <div class="stat-desc">Jumlah pengqurban yang berpartisipasi</div>
+      </div>
+      <div class="stat-card sc-g">
+        <div class="stat-num">406</div>
+        <div class="stat-unit">Kg Daging</div>
+        <div class="stat-desc">Total estimasi daging bersih</div>
+      </div>
+      <div class="stat-card sc-gr">
+        <div class="stat-num">475</div>
+        <div class="stat-unit">Paket</div>
+        <div class="stat-desc">Target total paket distribusi</div>
+      </div>
+      <div class="stat-card sc-p">
+        <div class="stat-num">10</div>
+        <div class="stat-unit">Wilayah</div>
+        <div class="stat-desc">RT/RW yang menerima distribusi</div>
+      </div>
+    </div>
+
+    <div class="hewan-grid">
+      <div class="hewan-card" data-e="🐄">
+        <h3>Sapi</h3>
+        <div class="hewan-kg">270 Kg</div>
+        <div class="hewan-sub">Estimasi daging bersih</div>
+        <div class="hewan-pill">@5,5 Ons / kantong</div>
+      </div>
+      <div class="hewan-card k" data-e="🐐">
+        <h3>Kambing / Domba</h3>
+        <div class="hewan-kg">136 Kg</div>
+        <div class="hewan-sub">Estimasi daging bersih</div>
+        <div class="hewan-pill">@3 Ons / kantong</div>
+      </div>
+    </div>
+
+    <div class="total-box">
+      <div class="t-item">
+        <div class="t-lbl">Grand Total Paket</div>
+        <div class="t-val">475 <span>paket</span></div>
+        <div class="t-note">Termasuk cadangan aman ±14 paket</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.18);height:70px;flex-shrink:0"></div>
+      <div class="t-item">
+        <div class="t-lbl">Penerima Warga</div>
+        <div class="t-val" style="font-size:40px">379 <span>bungkus</span></div>
+      </div>
+      <div class="t-item">
+        <div class="t-lbl">Penerima Tambahan</div>
+        <div class="t-val" style="font-size:40px">82 <span>paket</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEWAN & DAGING ===== -->
+  <div class="section" id="tab-hewan">
+    <p class="sec-eyebrow">Data Hewan</p>
+    <h2 class="sec-title">Hewan Qurban & Estimasi Daging</h2>
+
+    <div class="paket-grid">
+      <div class="paket-card">
+        <div class="p-icon" style="background:#EBF5F3">🥩</div>
+        <div class="p-lbl">Paket Sapi</div>
+        <div class="p-val">270 Kg</div>
+        <div class="p-sub">@5,5 Ons (550 gr) / kantong</div>
+      </div>
+      <div class="paket-card">
+        <div class="p-icon" style="background:var(--gold-bg)">🐑</div>
+        <div class="p-lbl">Paket Kambing</div>
+        <div class="p-val">136 Kg</div>
+        <div class="p-sub">@3 Ons (300 gr) / kantong</div>
+      </div>
+      <div class="paket-card">
+        <div class="p-icon" style="background:#EDE9FE">⭐</div>
+        <div class="p-lbl">Khusus Mudhoki</div>
+        <div class="p-val">34</div>
+        <div class="p-sub">1,5 Kg / pengqurban</div>
+      </div>
+      <div class="paket-card">
+        <div class="p-icon" style="background:#FDF2F8">📖</div>
+        <div class="p-lbl">Khusus Ustadz</div>
+        <div class="p-val">4</div>
+        <div class="p-sub">1,0 Kg / ustadz</div>
+      </div>
+    </div>
+
+    <div style="background:var(--white);border-radius:14px;padding:22px 24px;border:1px solid var(--border);margin-bottom:20px">
+      <p class="sec-eyebrow" style="margin-bottom:14px">Rumus Perhitungan Daging</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px">
+        <div style="background:var(--teal-lt);border-radius:10px;padding:16px">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:6px">Kambing</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--teal)">136 Kg</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">3 Ons per bungkus (dibulatkan)</div>
+        </div>
+        <div style="background:var(--gold-bg);border-radius:10px;padding:16px">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#7A5010;margin-bottom:6px">Sapi</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--gold)">270 Kg</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">5,5 Ons per bungkus (dibulatkan)</div>
+        </div>
+        <div style="background:#F4F0FA;border-radius:10px;padding:16px">
+          <div style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#6B46C1;margin-bottom:6px">Jerohan & Tulang</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#6B46C1">Campur</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">Dibagikan campuran ke paket distribusi</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tamb-grid">
+      <div class="tamb-card"><div class="tamb-num">54</div><div class="tamb-lbl">Panitia</div></div>
+      <div class="tamb-card"><div class="tamb-num">10</div><div class="tamb-lbl">Kebersihan</div></div>
+      <div class="tamb-card"><div class="tamb-num">6</div><div class="tamb-lbl">Petg. Makam</div></div>
+      <div class="tamb-card"><div class="tamb-num">5</div><div class="tamb-lbl">Guru TPQ</div></div>
+      <div class="tamb-card"><div class="tamb-num">4</div><div class="tamb-lbl">Satpam BPA</div></div>
+      <div class="tamb-card"><div class="tamb-num">3</div><div class="tamb-lbl">Timbangan</div></div>
+    </div>
+    <div style="font-size:12px;color:var(--muted);text-align:right;margin-bottom:8px">Total tambahan: <strong style="color:var(--teal)">82 paket</strong></div>
+  </div>
+
+  <!-- ===== DISTRIBUSI ===== -->
+  <div class="section" id="tab-distribusi">
+    <p class="sec-eyebrow">Sebaran Daging</p>
+    <h2 class="sec-title">Distribusi per Wilayah (10 RT/RW)</h2>
+
+    <div class="dist-list">
+      <div class="dist-row"><span class="dist-lbl">Mendut RT.01/RW.05</span><div class="dist-wrap"><div class="dist-bar" style="width:100%">61</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">Rorojong RT.09/RW.06</span><div class="dist-wrap"><div class="dist-bar" style="width:93%">57</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">BPA Blok A – RT.08</span><div class="dist-wrap"><div class="dist-bar" style="width:69%">42</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">Rorojong RT.13/RW.06</span><div class="dist-wrap"><div class="dist-bar" style="width:59%">36</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">BPA Blok H – RT.02</span><div class="dist-wrap"><div class="dist-bar" style="width:56%">34</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">BPA Blok J – RT.07</span><div class="dist-wrap"><div class="dist-bar" style="width:56%">34</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">BPA Blok G – RT.01</span><div class="dist-wrap"><div class="dist-bar" style="width:54%">33</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">BPA Blok I – RT.03</span><div class="dist-wrap"><div class="dist-bar" style="width:49%">30</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">BPA Blok K – RT.06</span><div class="dist-wrap"><div class="dist-bar" style="width:49%">30</div></div></div>
+      <div class="dist-row"><span class="dist-lbl">BPA Blok L – RT.05</span><div class="dist-wrap"><div class="dist-bar" style="width:36%">22</div></div></div>
+    </div>
+    <div style="font-size:12px;color:var(--muted);text-align:right;margin-bottom:28px">Total warga: <strong style="color:var(--teal)">379 bungkus</strong> &nbsp;|&nbsp; Penerima terbanyak: <strong style="color:var(--teal)">Mendut (61)</strong></div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+      <div style="background:var(--teal);color:#fff;border-radius:14px;padding:20px 18px">
+        <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;opacity:.6;margin-bottom:8px">Distribusi Ustadz</div>
+        <div style="font-size:13px;line-height:2">Ustadz Mas'ud Asrori &nbsp;·&nbsp; 1 Kg<br>Ustadz Abidin &nbsp;·&nbsp; 1 Kg<br>Ustadz Ikhwan &nbsp;·&nbsp; 1 Kg<br>Gus Munawar &nbsp;·&nbsp; 1 Kg</div>
+        <div style="margin-top:12px;font-size:11px;opacity:.6">Total: 4 Kg</div>
+      </div>
+      <div style="background:var(--gold-bg);border-radius:14px;padding:20px 18px;border:1px solid rgba(200,151,58,.25)">
+        <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#7A5010;margin-bottom:8px">Mudhoki (Khusus)</div>
+        <div style="font-size:26px;font-family:'Playfair Display',serif;font-weight:900;color:var(--gold)">34 orang</div>
+        <div style="font-size:12px;color:#8A6020;margin-top:6px">Masing-masing 1,5 Kg &nbsp;=&nbsp; <strong>42 Kg total</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAFTAR PENGQURBAN ===== -->
+  <div class="section" id="tab-pengqurban">
+    <p class="sec-eyebrow">Mudhoki 1447 H</p>
+    <h2 class="sec-title">Daftar Nama Pengqurban 2026</h2>
+
+    <div class="qurban-controls">
+      <input type="text" class="qurban-search" id="qSearch" placeholder="Cari nama pengqurban..." oninput="filterQurban()">
+      <div class="filter-btns">
+        <button class="flt-btn active" onclick="setFilter('all',this)">Semua</button>
+        <button class="flt-btn" onclick="setFilter('sapi',this)">🐄 Sapi</button>
+        <button class="flt-btn" onclick="setFilter('kambing',this)">🐐 Kambing</button>
+      </div>
+    </div>
+    <div class="q-count-info" id="qCountInfo">Menampilkan semua 34 pengqurban</div>
+    <div id="qurbanList"></div>
+  </div>
+
+  <!-- ===== PANITIA ===== -->
+  <div class="section" id="tab-panitia">
+    <p class="sec-eyebrow">Kepengurusan</p>
+    <h2 class="sec-title">Susunan Panitia Qurban 2026</h2>
+
+    <div class="pan-grid">
+      <div class="pan-card"><div class="pan-role">Ketua Takmir Masjid</div><div class="pan-name">Subkhi</div></div>
+      <div class="pan-card"><div class="pan-role">Ketua Panitia Qurban</div><div class="pan-name">Umar</div></div>
+      <div class="pan-card"><div class="pan-role">Sekretaris</div><div class="pan-name">Rizky & Sigit Handoko</div></div>
+      <div class="pan-card"><div class="pan-role">Bendahara</div><div class="pan-name">Sukadi</div></div>
+    </div>
+
+    <div class="seksi-wrap">
+      <div class="seksi-ttl">Seksi-Seksi Operasional</div>
+      <div class="tags">
+        <span class="tag">Pemeliharaan & Penerimaan Hewan</span>
+        <span class="tag">Pemotongan</span>
+        <span class="tag">Perlengkapan</span>
+        <span class="tag">Pengulitan</span>
+        <span class="tag">Pembagian / Distribusi</span>
+        <span class="tag">Pengirisan & Penimbangan</span>
+        <span class="tag">Pembersihan Jeroan</span>
+        <span class="tag">Transportasi</span>
+        <span class="tag">Keamanan & Pengawasan</span>
+        <span class="tag">Penerimaan Kepala & Kulit</span>
+        <span class="tag">Konsumsi</span>
+      </div>
+    </div>
+
+    <div style="background:var(--white);border-radius:14px;padding:20px 24px;border:1px solid var(--border)">
+      <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px">Rekap Jumlah Panitia</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:12px">
+        <div style="text-align:center"><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--teal)">33</div><div style="font-size:11px;color:var(--muted)">Bapak-bapak</div></div>
+        <div style="text-align:center"><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--teal)">15</div><div style="font-size:11px;color:var(--muted)">Ibu-ibu</div></div>
+        <div style="text-align:center"><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--teal)">6</div><div style="font-size:11px;color:var(--muted)">Remaja</div></div>
+        <div style="text-align:center;background:var(--teal);border-radius:10px;padding:10px"><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#fff">54</div><div style="font-size:11px;color:rgba(255,255,255,.7)">Total Panitia</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LAPORAN KEUANGAN ===== -->
+  <div class="section" id="tab-keuangan">
+    <p class="sec-eyebrow">Transparansi</p>
+    <h2 class="sec-title">Laporan Keuangan Qurban 1447 H</h2>
+
+    <div class="keu-hero">
+      <h2>Laporan Keuangan</h2>
+      <p>Idul Adha 1447 H / 2026 M &nbsp;&middot;&nbsp; Masjid Al-Ikhlas, Semarang</p>
+      <div class="keu-sig">
+        <div class="keu-avatar">U</div>
+        <div>
+          <div class="keu-sig-txt">Dibacakan oleh Ketua Panitia</div>
+          <div class="keu-sig-name">Bp. Umar Mustofa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="keu-notice">
+      <div class="keu-notice-icon">📋</div>
+      <div>
+        <h4>Laporan Keuangan Sedang Disusun</h4>
+        <p>Detail laporan keuangan akan dibacakan langsung oleh <strong>Ketua Panitia Bp. Umar Mustofa</strong> pada saat rapat evaluasi / syukuran panitia. Laporan disusun oleh Bendahara <strong>Sukadi</strong> dan akan mencakup seluruh pemasukan dari mudhoki serta pengeluaran operasional pelaksanaan qurban 1447 H / 2026 M.</p>
+      </div>
+    </div>
+
+    <div class="keu-skeleton">
+      <h4>📥 Pemasukan (Iuran Mudhoki)</h4>
+      <div class="sk-row full"></div>
+      <div class="sk-row med"></div>
+      <div class="sk-row short"></div>
+      <div class="sk-row full"></div>
+    </div>
+
+    <div class="keu-skeleton">
+      <h4>📤 Pengeluaran Operasional</h4>
+      <div class="sk-row med"></div>
+      <div class="sk-row full"></div>
+      <div class="sk-row short"></div>
+      <div class="sk-row med"></div>
+      <div class="sk-row full"></div>
+    </div>
+
+    <table class="keu-table">
+      <thead>
+        <tr>
+          <th>Uraian</th>
+          <th style="text-align:right">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jumlah Mudhoki</td><td style="text-align:right;font-weight:600;color:var(--teal)">34 orang</td></tr>
+        <tr><td>Hewan Sapi (jumlah ekor)</td><td style="text-align:right;font-weight:600;color:var(--teal)">Data aktual panitia</td></tr>
+        <tr><td>Hewan Kambing (jumlah ekor)</td><td style="text-align:right;font-weight:600;color:var(--teal)">Data aktual panitia</td></tr>
+        <tr><td>Total Daging Bersih</td><td style="text-align:right;font-weight:600;color:var(--teal)">±406 Kg</td></tr>
+        <tr><td>Total Paket Distribusi</td><td style="text-align:right;font-weight:600;color:var(--teal)">475 paket</td></tr>
+        <tr class="total-row"><td>Saldo Akhir / Surplus</td><td style="text-align:right">Akan diumumkan Bp. Umar</td></tr>
+      </tbody>
+    </table>
+
+    <div style="background:var(--teal-lt);border-radius:12px;padding:16px 20px;border:1px solid rgba(13,92,92,.15);margin-bottom:28px">
+      <div style="font-size:12px;color:var(--teal);line-height:1.8">
+        <strong>Catatan Transparansi:</strong> Seluruh detail pemasukan dari masing-masing mudhoki dan rincian pengeluaran (pembelian hewan, perlengkapan, konsumsi panitia, dll.) akan dilaporkan secara lengkap oleh <strong>Bp. Umar Mustofa</strong> selaku Ketua Panitia, dan dapat dikonfirmasi kepada Bendahara <strong>Sukadi</strong>.
+      </div>
+    </div>
+
+    <div class="keu-sign">
+      <div class="keu-sign-box">
+        <p>Semarang, Idul Adha 1447 H<br>Ketua Panitia Qurban</p>
+        <div class="keu-sign-line"></div>
+        <div class="name">Umar Mustofa</div>
+        <div class="role">Ketua Panitia</div>
+      </div>
+      <div class="keu-sign-box">
+        <p>Semarang, Idul Adha 1447 H<br>Bendahara / Penyusun</p>
+        <div class="keu-sign-line"></div>
+        <div class="name">Sukadi</div>
+        <div class="role">Bendahara</div>
+      </div>
+      <div class="keu-sign-box">
+        <p>Semarang, Idul Adha 1447 H<br>Mengetahui</p>
+        <div class="keu-sign-line"></div>
+        <div class="name">Subkhi</div>
+        <div class="role">Ketua Takmir Masjid</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /sections -->
+
+<div class="ftr">
+  <strong>Barakallah</strong> &mdash; Semoga berkah untuk yang telah berqurban di Masjid Al-Ikhlas<br>
+  Dan semoga diberikan keluangan rezeki untuk berqurban kembali tahun depan 🤲
+</div>
+
+<script>
+const DATA = {
+  sapi: [
+    // SAPI 1
+    {name:'Subkhi',niat:'Lynnisa Rieky M.K',addr:'Mendut Utara',grp:'Sapi 1'},
+    {name:'Risyam Suparno',niat:'Ibu Meliana Umijanti',addr:'RT 01/RW 05',grp:'Sapi 1'},
+    {name:'Slamet Kamsino',niat:'Kel. Slamet Kamsino',addr:'RT 01/RW 08',grp:'Sapi 1'},
+    {name:'Ellen Icha Rozinda',niat:'Ellen Icha Rozinda',addr:'Blok E No.4 RT 8/RW 8',grp:'Sapi 1'},
+    {name:'Abrisam Dwi Permana',niat:'Abrisam Dwi Permana Bin Briandanny Permana',addr:'RT 09 RW 06',grp:'Sapi 1'},
+    {name:'Pramono',niat:'Kel. BP. Pramono',addr:'RT 13 RW 06',grp:'Sapi 1'},
+    {name:'Ibu Titik Yuntari',niat:'Kel. Alm BP. Wahyudi',addr:'RT 13 RW 06',grp:'Sapi 1'},
+    // SAPI 2
+    {name:'Joko Sutrisno',niat:'Ibu Eryani',addr:'RT 13 RW 06',grp:'Sapi 2'},
+    {name:'Sarbini',niat:'Kel. Sarbini',addr:'RT 13 RW 06',grp:'Sapi 2'},
+    {name:'Ibu Siti Maimunah',niat:'Ibu Siti Maimunah',addr:'Blok J No.16',grp:'Sapi 2'},
+    {name:'Agus K Kriswanto',niat:'Keluarga Agus Kriswanto',addr:'RT 01 RW 08',grp:'Sapi 2'},
+    {name:'Agus Budi Santoso',niat:'Kel. Agus Budi Santoso',addr:'RT 02 RW 08',grp:'Sapi 2'},
+    {name:'Reno',niat:'Alm BP. Legowo Suprapto',addr:'RT 08 RW 08',grp:'Sapi 2'},
+    {name:'Budi Iskandar',niat:'Calya Dini Daniswara',addr:'RT 08 RW 08',grp:'Sapi 2'},
+    // SAPI 3
+    {name:'Keluarga BP. Legino',niat:'BP. Legino / Ibu Sumarningsih / Aliffia Lalintang',addr:'Blok A.19',grp:'Sapi 3'},
+    {name:'BPA Blok A.19',niat:'Ibu Wagiyem / Alm BP. Jimin / Almh Ibu Sumiyen / Alm BP. Supardi',addr:'Blok A.19',grp:'Sapi 3'},
+  ],
+  kambing: [
+    {name:'Basuki Busro',niat:'Keluarga Basuki Busro',addr:'RT 13 RW 06'},
+    {name:'Rizky Rachmaputra',niat:'Ery Widhiastuti',addr:'RT 13 RW 06'},
+    {name:'Risdanu Arifianto',niat:'Keluarga Risdanu Arifianto',addr:'RT 09 RW 06'},
+    {name:'Nur Khasan',niat:'Haura Nabila Hasan Bin Nur Khasan',addr:'BPA K.22'},
+    {name:'Yusfika Permata Binti',niat:'Yusfika Permata Binti Kholid Rosyidi',addr:'RT 08 RW 08'},
+    {name:'Bambang Edy',niat:'Ibu Sakimah Binta Nurma Wijaya',addr:'RT 05 RW 08'},
+    {name:'Rama',niat:'Siti Norma Budiningsih',addr:'BPA H.6'},
+    {name:'Fajar Kurniawan',niat:'Kel. Fajar Kurniawan',addr:'BPA Blok 1 No.16'},
+    {name:'Rayhan Nur Arifin',niat:'Rayhan Nur Arifin',addr:'BPA E.9'},
+    {name:'Ari Widiyanto',niat:'Kel. Ari Widiyanto',addr:'BPA H.8'},
+    {name:'Wafiq Aziz Febriansah',niat:'Wafiq Aziz Febriansah',addr:'RT 13 RW 06'},
+    {name:'Ibu Sasti Surahmi',niat:'Ibu Sasti Surahmi',addr:'RT 06 RW 06'},
+    {name:'Diah Ayu Puspitasari',niat:'Tri Yulianto Sekeluarga',addr:'BPA J.10'},
+    {name:'Ibu Eko Ambarwati',niat:'Ibu Eko Ambarwati',addr:'BPA G.23'},
+    {name:'Hendi Prasetianto',niat:'Natasya Aulia Hendian',addr:'BPA J.9'},
+    {name:'Ibu Diyoso',niat:'Ibu Diyoso',addr:'BPA Blok A'},
+    {name:'Ibu Lasiyem',niat:'Ibu Lasiyem',addr:'Mendut Utara 01/05'},
+    {name:'Keylen Bintang Eksan',niat:'Keylen Bintang Eksan',addr:'BPA E.7'},
+    {name:'Adinda Afifah Nuryasti',niat:'Adinda Afifah Nuryasti',addr:'BPA A.13'},
+    {name:'Ibu Desi Soraya',niat:'Ibu Suwarni Sostro Powiro',addr:'BPA A.32'},
+  ]
+};
+
+let currentFilter = 'all';
+
+function getInitials(name){
+  return name.split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase().slice(0,2);
+}
+
+function avatarClass(grp){
+  if(!grp) return 'av-kambing';
+  if(grp==='Sapi 1') return 'av-sapi1';
+  if(grp==='Sapi 2') return 'av-sapi2';
+  return 'av-sapi3';
+}
+
+function renderQurban(sapiFiltered, kambingFiltered){
+  let html = '';
+  const q = document.getElementById('qSearch').value.toLowerCase();
+
+  if(currentFilter !== 'kambing'){
+    const grps = ['Sapi 1','Sapi 2','Sapi 3'];
+    grps.forEach(g => {
+      const items = sapiFiltered.filter(x=>x.grp===g);
+      if(!items.length) return;
+      html += `<div class="sapi-section">
+        <div class="sapi-header">
+          <span class="sapi-badge">🐄 ${g}</span>
+          <span class="sapi-count">${items.length} pengqurban</span>
+        </div>
+        <div class="qurban-grid">`;
+      items.forEach(p=>{
+        html+=`<div class="qurban-card">
+          <div class="q-avatar ${avatarClass(p.grp)}">${getInitials(p.name)}</div>
+          <div class="q-body">
+            <div class="q-name">${p.name}</div>
+            <div class="q-niat">Diniatkan untuk: ${p.niat}</div>
+            <span class="q-addr">${p.addr}</span>
+          </div>
+        </div>`;
+      });
+      html+='</div></div>';
+    });
+  }
+
+  if(currentFilter !== 'sapi' && kambingFiltered.length){
+    html+=`<div class="sapi-section">
+      <div class="sapi-header">
+        <span class="sapi-badge k">🐐 Kambing / Domba</span>
+        <span class="sapi-count">${kambingFiltered.length} pengqurban</span>
+      </div>
+      <div class="qurban-grid">`;
+    kambingFiltered.forEach(p=>{
+      html+=`<div class="qurban-card">
+        <div class="q-avatar av-kambing">${getInitials(p.name)}</div>
+        <div class="q-body">
+          <div class="q-name">${p.name}</div>
+          <div class="q-niat">Diniatkan untuk: ${p.niat}</div>
+          <span class="q-addr">${p.addr}</span>
+        </div>
+      </div>`;
+    });
+    html+='</div></div>';
+  }
+
+  const total = sapiFiltered.length + kambingFiltered.length;
+  if(!total) html='<div class="q-empty">Tidak ada nama yang sesuai pencarian.</div>';
+
+  document.getElementById('qurbanList').innerHTML = html;
+  document.getElementById('qCountInfo').textContent = `Menampilkan ${total} dari 34 pengqurban`;
+}
+
+function filterQurban(){
+  const q = document.getElementById('qSearch').value.toLowerCase();
+  const sf = DATA.sapi.filter(x=>x.name.toLowerCase().includes(q)||x.niat.toLowerCase().includes(q)||x.addr.toLowerCase().includes(q));
+  const kf = DATA.kambing.filter(x=>x.name.toLowerCase().includes(q)||x.niat.toLowerCase().includes(q)||x.addr.toLowerCase().includes(q));
+  renderQurban(sf,kf);
+}
+
+function setFilter(f,btn){
+  currentFilter = f;
+  document.querySelectorAll('.flt-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  filterQurban();
+}
+
+function showTab(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  if(id==='pengqurban') filterQurban();
+}
+
+renderQurban(DATA.sapi, DATA.kambing);
+</script>
+</body>
+</html>
