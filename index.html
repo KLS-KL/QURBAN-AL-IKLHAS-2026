@@ -209,7 +209,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal
 
     <div class="stat-grid">
       <div class="stat-card sc-t">
-        <div class="stat-num">34</div>
+        <div class="stat-num">42</div>
         <div class="stat-unit">Mudhoki</div>
         <div class="stat-desc">Jumlah pengqurban yang berpartisipasi</div>
       </div>
@@ -284,7 +284,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal
       <div class="paket-card">
         <div class="p-icon" style="background:#EDE9FE">⭐</div>
         <div class="p-lbl">Khusus Mudhoki</div>
-        <div class="p-val">34</div>
+        <div class="p-val">42</div>
         <div class="p-sub">1,5 Kg / pengqurban</div>
       </div>
       <div class="paket-card">
@@ -354,8 +354,8 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal
       </div>
       <div style="background:var(--gold-bg);border-radius:14px;padding:20px 18px;border:1px solid rgba(200,151,58,.25)">
         <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#7A5010;margin-bottom:8px">Mudhoki (Khusus)</div>
-        <div style="font-size:26px;font-family:'Playfair Display',serif;font-weight:900;color:var(--gold)">34 orang</div>
-        <div style="font-size:12px;color:#8A6020;margin-top:6px">Masing-masing 1,5 Kg &nbsp;=&nbsp; <strong>42 Kg total</strong></div>
+        <div style="font-size:26px;font-family:'Playfair Display',serif;font-weight:900;color:var(--gold)">42 orang</div>
+        <div style="font-size:12px;color:#8A6020;margin-top:6px">Masing-masing 1,5 Kg &nbsp;=&nbsp; <strong>63 Kg total</strong></div>
       </div>
     </div>
   </div>
@@ -373,7 +373,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal
         <button class="flt-btn" onclick="setFilter('kambing',this)">🐐 Kambing</button>
       </div>
     </div>
-    <div class="q-count-info" id="qCountInfo">Menampilkan semua 34 pengqurban</div>
+    <div class="q-count-info" id="qCountInfo">Menampilkan semua 42 mudhoki</div>
     <div id="qurbanList"></div>
   </div>
 
@@ -434,51 +434,79 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal
       </div>
     </div>
 
-    <div class="keu-notice">
-      <div class="keu-notice-icon">📋</div>
-      <div>
-        <h4>Laporan Keuangan Sedang Disusun</h4>
-        <p>Detail laporan keuangan akan dibacakan langsung oleh <strong>Ketua Panitia Bp. Umar Mustofa</strong> pada saat rapat evaluasi / syukuran panitia. Laporan disusun oleh Bendahara <strong>Sukadi</strong> dan akan mencakup seluruh pemasukan dari mudhoki serta pengeluaran operasional pelaksanaan qurban 1447 H / 2026 M.</p>
+    <!-- SUMMARY BOXES -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:28px">
+      <div style="background:var(--teal-lt);border-radius:14px;padding:20px 16px;text-align:center;border:1px solid rgba(13,92,92,.12)">
+        <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal-mid);margin-bottom:6px">Total Pemasukan</div>
+        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--teal)">Rp53,083,350</div>
+      </div>
+      <div style="background:#FEF0EE;border-radius:14px;padding:20px 16px;text-align:center;border:1px solid rgba(180,60,40,.1)">
+        <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#A03020;margin-bottom:6px">Total Pengeluaran</div>
+        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#C04030">Rp53,332,000</div>
+      </div>
+      <div style="background:#FEF3E2;border-radius:14px;padding:20px 16px;text-align:center;border:1px solid rgba(200,151,58,.2)">
+        <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#7A5010;margin-bottom:6px">Saldo Akhir</div>
+        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#C04030">−Rp248,650</div>
+        <div style="font-size:10px;color:#8A6020;margin-top:4px">Defisit ditanggung kas masjid</div>
       </div>
     </div>
 
-    <div class="keu-skeleton">
-      <h4>📥 Pemasukan (Iuran Mudhoki)</h4>
-      <div class="sk-row full"></div>
-      <div class="sk-row med"></div>
-      <div class="sk-row short"></div>
-      <div class="sk-row full"></div>
+    <!-- PEMASUKAN -->
+    <div style="margin-bottom:24px">
+      <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--teal)"></span>PEMASUKAN
+      </div>
+      <table class="keu-table">
+        <thead><tr><th>Uraian</th><th style="text-align:center">Vol</th><th style="text-align:right">Satuan</th><th style="text-align:right">Total</th></tr></thead>
+        <tbody>
+          <tr><td>Sisa Saldo Tahun Lalu</td><td style="text-align:center">1</td><td style="text-align:right">Rp1</td><td style="text-align:right;font-weight:600">Rp1,283,350</td></tr>
+          <tr><td>Iuran Sapi Ke-1</td><td style="text-align:center">7</td><td style="text-align:right">Rp3,500,000</td><td style="text-align:right;font-weight:600">Rp24,500,000</td></tr>
+          <tr><td>Iuran Sapi Ke-2</td><td style="text-align:center">7</td><td style="text-align:right">Rp3,500,000</td><td style="text-align:right;font-weight:600">Rp24,500,000</td></tr>
+          <tr><td>Biaya Perawatan Kambing</td><td style="text-align:center">21</td><td style="text-align:right">Rp100,000</td><td style="text-align:right;font-weight:600">Rp2,100,000</td></tr>
+          <tr><td>Biaya Perawatan Sapi</td><td style="text-align:center">1</td><td style="text-align:right">Rp700,000</td><td style="text-align:right;font-weight:600">Rp700,000</td></tr>
+          <tr class="total-row"><td colspan="3"><strong>TOTAL PEMASUKAN</strong></td><td style="text-align:right"><strong>Rp53,083,350</strong></td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="keu-skeleton">
-      <h4>📤 Pengeluaran Operasional</h4>
-      <div class="sk-row med"></div>
-      <div class="sk-row full"></div>
-      <div class="sk-row short"></div>
-      <div class="sk-row med"></div>
-      <div class="sk-row full"></div>
+    <!-- PENGELUARAN -->
+    <div style="margin-bottom:24px">
+      <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#C04030;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#C04030"></span>PENGELUARAN
+      </div>
+      <table class="keu-table">
+        <thead><tr><th>Uraian</th><th style="text-align:center">Vol</th><th style="text-align:right">Satuan</th><th style="text-align:right">Total</th></tr></thead>
+        <tbody>
+          <tr><td>Pembelian Sapi</td><td style="text-align:center">2</td><td style="text-align:right">Rp23,750,000</td><td style="text-align:right;font-weight:600">Rp47,500,000</td></tr>
+          <tr><td>Konsumsi</td><td style="text-align:center">1</td><td style="text-align:right">Rp1,000,000</td><td style="text-align:right;font-weight:600">Rp1,000,000</td></tr>
+          <tr><td>Jasa Potong Hewan</td><td style="text-align:center">1</td><td style="text-align:right">Rp2,000,000</td><td style="text-align:right;font-weight:600">Rp2,000,000</td></tr>
+          <tr><td>Jasa Penjaga (2 orang)</td><td style="text-align:center">1</td><td style="text-align:right">Rp550,000</td><td style="text-align:right;font-weight:600">Rp550,000</td></tr>
+          <tr><td>Snack Penjaga</td><td style="text-align:center">2</td><td style="text-align:right">Rp25,000</td><td style="text-align:right;font-weight:600">Rp50,000</td></tr>
+          <tr><td>Sparepart Mesin Potong</td><td style="text-align:center">1</td><td style="text-align:right">Rp150,000</td><td style="text-align:right;font-weight:600">Rp150,000</td></tr>
+          <tr><td>Perlengkapan</td><td style="text-align:center">1</td><td style="text-align:right">Rp954,000</td><td style="text-align:right;font-weight:600">Rp954,000</td></tr>
+          <tr><td>Stiker Tempel</td><td style="text-align:center">1</td><td style="text-align:right">Rp50,000</td><td style="text-align:right;font-weight:600">Rp50,000</td></tr>
+          <tr><td>Rokok</td><td style="text-align:center">1</td><td style="text-align:right">Rp303,000</td><td style="text-align:right;font-weight:600">Rp303,000</td></tr>
+          <tr><td>Bensin Survey Sapi</td><td style="text-align:center">1</td><td style="text-align:right">Rp100,000</td><td style="text-align:right;font-weight:600">Rp100,000</td></tr>
+          <tr><td>Parkir</td><td style="text-align:center">1</td><td style="text-align:right">Rp25,000</td><td style="text-align:right;font-weight:600">Rp25,000</td></tr>
+          <tr><td>Jasa Transportasi</td><td style="text-align:center">1</td><td style="text-align:right">Rp300,000</td><td style="text-align:right;font-weight:600">Rp300,000</td></tr>
+          <tr><td>Sewa Tratag</td><td style="text-align:center">2</td><td style="text-align:right">Rp175,000</td><td style="text-align:right;font-weight:600">Rp350,000</td></tr>
+          <tr class="total-row"><td colspan="3"><strong>TOTAL PENGELUARAN</strong></td><td style="text-align:right"><strong>Rp53,332,000</strong></td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <table class="keu-table">
-      <thead>
-        <tr>
-          <th>Uraian</th>
-          <th style="text-align:right">Keterangan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Jumlah Mudhoki</td><td style="text-align:right;font-weight:600;color:var(--teal)">34 orang</td></tr>
-        <tr><td>Hewan Sapi (jumlah ekor)</td><td style="text-align:right;font-weight:600;color:var(--teal)">Data aktual panitia</td></tr>
-        <tr><td>Hewan Kambing (jumlah ekor)</td><td style="text-align:right;font-weight:600;color:var(--teal)">Data aktual panitia</td></tr>
-        <tr><td>Total Daging Bersih</td><td style="text-align:right;font-weight:600;color:var(--teal)">±406 Kg</td></tr>
-        <tr><td>Total Paket Distribusi</td><td style="text-align:right;font-weight:600;color:var(--teal)">475 paket</td></tr>
-        <tr class="total-row"><td>Saldo Akhir / Surplus</td><td style="text-align:right">Akan diumumkan Bp. Umar</td></tr>
-      </tbody>
-    </table>
+    <!-- SALDO AKHIR -->
+    <div style="background:linear-gradient(135deg,#3A1010,#6A2020);border-radius:14px;padding:22px 24px;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div>
+        <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:5px">Saldo Akhir (Defisit)</div>
+        <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:#FCA5A5;line-height:1">−Rp248,650</div>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,.6);max-width:260px;line-height:1.6">Selisih kecil ini akan dicatat sebagai hutang kas kegiatan Qurban dan diselesaikan melalui kas Masjid Al-Ikhlas.</div>
+    </div>
 
     <div style="background:var(--teal-lt);border-radius:12px;padding:16px 20px;border:1px solid rgba(13,92,92,.15);margin-bottom:28px">
       <div style="font-size:12px;color:var(--teal);line-height:1.8">
-        <strong>Catatan Transparansi:</strong> Seluruh detail pemasukan dari masing-masing mudhoki dan rincian pengeluaran (pembelian hewan, perlengkapan, konsumsi panitia, dll.) akan dilaporkan secara lengkap oleh <strong>Bp. Umar Mustofa</strong> selaku Ketua Panitia, dan dapat dikonfirmasi kepada Bendahara <strong>Sukadi</strong>.
+        <strong>Catatan Transparansi:</strong> Laporan keuangan ini dibacakan oleh <strong>Bp. Umar Mustofa</strong> selaku Ketua Panitia, dan disusun oleh Bendahara <strong>Sukadi</strong>. Seluruh bukti transaksi dapat dikonfirmasi kepada panitia.
       </div>
     </div>
 
@@ -530,9 +558,14 @@ const DATA = {
     {name:'Agus Budi Santoso',niat:'Kel. Agus Budi Santoso',addr:'RT 02 RW 08',grp:'Sapi 2'},
     {name:'Reno',niat:'Alm BP. Legowo Suprapto',addr:'RT 08 RW 08',grp:'Sapi 2'},
     {name:'Budi Iskandar',niat:'Calya Dini Daniswara',addr:'RT 08 RW 08',grp:'Sapi 2'},
-    // SAPI 3
-    {name:'Keluarga BP. Legino',niat:'BP. Legino / Ibu Sumarningsih / Aliffia Lalintang',addr:'Blok A.19',grp:'Sapi 3'},
-    {name:'BPA Blok A.19',niat:'Ibu Wagiyem / Alm BP. Jimin / Almh Ibu Sumiyen / Alm BP. Supardi',addr:'Blok A.19',grp:'Sapi 3'},
+    // SAPI 3 — Keluarga BP. Legino (7 mudhoki)
+    {name:'BP. Legino',niat:'BP. Legino',addr:'BPA Blok A.19',grp:'Sapi 3'},
+    {name:'Ibu Sumarningsih',niat:'Ibu Sumarningsih',addr:'BPA Blok A.19',grp:'Sapi 3'},
+    {name:'Aliffia Lalintang',niat:'Aliffia Lalintang',addr:'BPA Blok A.19',grp:'Sapi 3'},
+    {name:'Ibu Wagiyem',niat:'Ibu Wagiyem',addr:'BPA Blok A.19',grp:'Sapi 3'},
+    {name:'Alm. BP. Jimin',niat:'Alm. BP. Jimin',addr:'BPA Blok A.19',grp:'Sapi 3'},
+    {name:'Almh. Ibu Sumiyen',niat:'Almh. Ibu Sumiyen',addr:'BPA Blok A.19',grp:'Sapi 3'},
+    {name:'Alm. BP. Supardi',niat:'Alm. BP. Supardi',addr:'BPA Blok A.19',grp:'Sapi 3'},
   ],
   kambing: [
     {name:'Basuki Busro',niat:'Keluarga Basuki Busro',addr:'RT 13 RW 06'},
@@ -624,7 +657,7 @@ function renderQurban(sapiFiltered, kambingFiltered){
   if(!total) html='<div class="q-empty">Tidak ada nama yang sesuai pencarian.</div>';
 
   document.getElementById('qurbanList').innerHTML = html;
-  document.getElementById('qCountInfo').textContent = `Menampilkan ${total} dari 34 pengqurban`;
+  document.getElementById('qCountInfo').textContent = `Menampilkan ${total} dari 42 mudhoki`;
 }
 
 function filterQurban(){
