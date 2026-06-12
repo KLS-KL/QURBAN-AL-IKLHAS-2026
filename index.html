@@ -373,7 +373,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal
         <button class="flt-btn" onclick="setFilter('kambing',this)">🐐 Kambing</button>
       </div>
     </div>
-    <div class="q-count-info" id="qCountInfo">Menampilkan semua 42 mudhoki</div>
+    <div class="q-count-info" id="qCountInfo">Menampilkan semua 43 mudhoki</div>
     <div id="qurbanList"></div>
   </div>
 
@@ -584,7 +584,8 @@ const DATA = {
     {name:'Ibu Eko Ambarwati',niat:'Ibu Eko Ambarwati',addr:'BPA G.23'},
     {name:'Hendi Prasetianto',niat:'Natasya Aulia Hendian',addr:'BPA J.9'},
     {name:'Ibu Diyoso',niat:'Ibu Diyoso',addr:'BPA Blok A'},
-    {name:'Ibu Lasiyem',niat:'Ibu Lasiyem',addr:'Mendut Utara 01/05'},
+    {name:'Ibu Lasiyem',niat:'Ibu Lasiyem (Kambing 1)',addr:'Mendut Utara 01/05'},
+    {name:'Ibu Lasiyem',niat:'Ibu Lasiyem (Kambing 2)',addr:'Mendut Utara 01/05'},
     {name:'Keylen Bintang Eksan',niat:'Keylen Bintang Eksan',addr:'BPA E.7'},
     {name:'Adinda Afifah Nuryasti',niat:'Adinda Afifah Nuryasti',addr:'BPA A.13'},
     {name:'Ibu Desi Soraya',niat:'Ibu Suwarni Sostro Powiro',addr:'BPA A.32'},
@@ -657,7 +658,7 @@ function renderQurban(sapiFiltered, kambingFiltered){
   if(!total) html='<div class="q-empty">Tidak ada nama yang sesuai pencarian.</div>';
 
   document.getElementById('qurbanList').innerHTML = html;
-  document.getElementById('qCountInfo').textContent = `Menampilkan ${total} dari 42 mudhoki`;
+  document.getElementById('qCountInfo').textContent = `Menampilkan ${total} dari 43 mudhoki`;
 }
 
 function filterQurban(){
